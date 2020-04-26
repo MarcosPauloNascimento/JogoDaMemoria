@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 typedef struct{
         int id;
         char nome[15];  //CAMINHO DA COR
@@ -136,6 +137,16 @@ void trocarFila(fila f1,fila f2, int idCor){
         //printf("\nremovido: %d\n",idCor);
         inserirNaFila(&f2,idCor);
         //printf("\ninserido: %d\n",idCor);
+    }
+}
+
+void ligaCelular(){
+    char teste[10] = {"/0"};
+    int i=0;
+    for(i=1;i<482;i++){
+        itoa(i,teste,10);
+        strcat(teste,".jpg");
+        readimagefile(teste, 0, 0, 400, 700);
     }
 }
 
